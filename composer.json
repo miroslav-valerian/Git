@@ -15,7 +15,7 @@
 		"email": "info@miroslav-valerian.cz",
 		"issues": "https://github.com/miroslav-valerian/Git/issues"
 	},
-	"version": "v0.1.0-dev",
+	"version": "v0.1.0",
 	"require": {
 		"php": ">=5.3.1"
 	},
