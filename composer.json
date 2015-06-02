@@ -1,0 +1,31 @@
+{
+	"name": "valerian/git",
+	"type": "library",
+	"description": "Git wrapper",
+	"keywords": ["curl"],
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Miroslav Valerian",
+			"homepage": "http://www.miroslav-valerian.cz",
+			"email": "info@miroslav-valerian.cz"
+		}
+	],
+	"support": {
+		"email": "info@miroslav-valerian.cz",
+		"issues": "https://github.com/miroslav-valerian/Git/issues"
+	},
+	"require": {
+		"php": ">=5.3.1",
+		"ext-curl": "*"
+	},
+	"require-dev": {
+		"php": ">=5.3.1",
+		"ext-curl": "*"
+	},
+	"autoload": {
+		"psr-0": {
+			"Valerian\\Git": "src/"
+		}
+	}
+}
