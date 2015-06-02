@@ -15,6 +15,7 @@
 		"email": "info@miroslav-valerian.cz",
 		"issues": "https://github.com/miroslav-valerian/Git/issues"
 	},
+	"version": "0.1",
 	"require": {
 		"php": ">=5.3.1",
 		"ext-curl": "*"
@@ -24,7 +25,7 @@
 		"ext-curl": "*"
 	},
 	"autoload": {
-		"psr-0": {
+		"psr-4": {
 			"Valerian\\Git": "src/"
 		}
 	}
