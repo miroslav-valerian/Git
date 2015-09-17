@@ -262,11 +262,7 @@ class Git
 		chdir($cwd);
 
 		if ($returnValue !== 0) {
-			print_R("Chyba");
-			print_r("-".$returnValue."-");
-			print_R("Command: ");
-			print_r($command);
-			//throw new GitException("Command " . $command . " failed.");
+			throw new GitException("Command " . $command . " failed. Return value ".$returnValue);
 		}
 
 		return $output;
