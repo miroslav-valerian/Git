@@ -15,18 +15,16 @@ class Git
 
 	/** @var string */
 	protected $path;
-	/*******OK********/
-	/**
-	 * 
+
+    /**
 	 * @param string $path
 	 */
 	public function __construct($path)
 	{
 		$this->path = $path;
 	}
-	/*******OK********/
-	/**
-	 * 
+
+    /**
 	 * @return array
 	 */
 	public function pull()
@@ -36,32 +34,7 @@ class Git
 		);
 	}
 
-	/*
-	  public function push()
-	  {
-	  return $this->execute(
-	  'git push'
-	  );
-	  }
- */
-	/*
-	public function branch($name)
-	{
-		return $this->execute(
-			"git branch '".$name."'"
-		);
-	}
-	
-	public function checkout($branch)
-	{
-		return $this->execute(
-			'git checkout '.$branch
-		);
-	}
-	*/
-
 	/**
-	 * 
 	 * @param string $message
 	 * @return array
 	 */
@@ -71,9 +44,8 @@ class Git
 			'git commit -m "' . $message . '" 2>&1'
 		);
 	}
-	/*******OK********/
-	/**
-	 * 
+
+    /**
 	 * @return array
 	 */
 	public function log($limit = null)
@@ -129,9 +101,8 @@ class Git
 		}
 		return $out;
 	}
-	/*******OK********/
-	/**
-	 * 
+
+    /**
 	 * @return array
 	 */
 	public function getLastLog()
@@ -148,7 +119,6 @@ class Git
 	}
 
 	/**
-	 * 
 	 * @param string $revision
 	 * @return array
 	 */
@@ -159,16 +129,8 @@ class Git
 		);
 	}
 
-	/**
-	 * 
-	 * @todo
-	 */
 	public function diff($from = "2014-05-01 14:00:00", $to = "2015-07-01 14:00:00")
 	{
-		/*$output = $this->execute(
-            'git diff --no-ext-diff ' . $from . ' ' . $to
-        );*/
-		
 		$output = $this->execute(
             'git diff'
         );
@@ -176,9 +138,7 @@ class Git
         return join("\n", $output);
 	}
 	
-	/*******OK********/
 	/**
-	 * 
 	 * @return string
 	 */
 	public function getCurrentBranch()
@@ -188,8 +148,8 @@ class Git
 		);
 		return $output[0];
 	}
-	/*******OK********/
-	/**
+
+    /**
 	 * Get all local branches
 	 * @return array
 	 */
@@ -211,8 +171,8 @@ class Git
 		}
 		return $branches;
 	}
-	/*******OK********/
-	/**
+
+    /**
 	 * Get all remote branches
 	 * @return array
 	 */
@@ -234,9 +194,8 @@ class Git
 		}
 		return $branches;
 	}
-	/*******OK********/
-	/**
-	 * 
+
+    /**
 	 * @param string $revision
 	 * @return string
 	 */
@@ -246,8 +205,8 @@ class Git
 			'git show ' . $revision . ' 2>&1'
 		);
 	}
-	/*******OK********/
-	/**
+
+    /**
 	 * 
 	 * @param string $command
 	 * @return array

@@ -5,7 +5,7 @@ include "Git.php";
 
 date_default_timezone_set('America/Los_Angeles');
 
-$git = new Valerian\Git\Git('/Library/WebServer/Documents/development/autosystem');
+$git = new Valerian\Git\Git('PATH TO GIT');
 
 //Get git status
 echo "GIT STATUS";
